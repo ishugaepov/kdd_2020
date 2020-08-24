@@ -1,0 +1,113 @@
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{natbib}
+
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+
+\usepackage[T1]{fontenc} 
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage[default,scale=0.95]{opensans}
+\renewcommand\seriesdefault{l}
+\renewcommand\mddefault{m}
+\renewcommand\bfdefault{m}% or \renewcommand\bfdefault{m}
+
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=magenta,
+}
+
+\urlstyle{same}
+
+\begin{document}
+
+\mainmatter 
+
+\title{KDD'2020 Notes}
+\titlerunning{{}}
+\author{Ilnur Shugaepov}
+\institute{VK.com}
+\authorrunning{{}}
+
+% \toctitle{Resume}
+\tocauthor{{}}
+
+\maketitle
+
+% \begin{abstract}
+% Ici va le résumé
+% \end{abstract}
+
+\medskip
+
+\begingroup
+\let\clearpage\relax
+\tableofcontents
+\addcontentsline{toc}{section}{Introduction}
+\endgroup
+
+\medskip
+\medskip
+
+\section*{Introduction}
+This document contains short notes and my thoughts on interesting articles from KDD'2020.
+
+
+\section{Joint Optimization of Multiple Objectives on Music Streaming Platforms}
+\cite{rishabh2020multiobjective}~(\url{https://dl.acm.org/doi/pdf/10.1145/3394486.3403374})
+
+\section{Improving Deep Learning For Airbnb Search}
+\cite{haldar2020improving}~(\url{https://arxiv.org/pdf/2002.05515.pdf})
+
+\section{General-Purpose User Embeddings based on Mobile App Usage}
+\cite{zhang2020general}~(\url{https://arxiv.org/pdf/2005.13303.pdf})
+
+\section{Controllable Multi-Interest Framework for Recommendation}
+
+\section{Managing Diversity in Airbnb Search}
+
+\section{Multitask Mixture of Sequential Experts for User Activity Streams}
+
+\section{Taming Pretrained Transformers for eXtreme Multi-label Text Classification}
+
+\section{SimClusters: Community-Based Representations for Heterogeneous Recommendations at Twitter}
+\url{https://dl.acm.org/doi/pdf/10.1145/3394486.3403370}
+
+\section{Ads Allocation in Feed via Constrained Optimization}
+\cite{yan2020ads}~(\url{https://dl.acm.org/doi/pdf/10.1145/3394486.3403391})
+
+\section{Retrospective Loss: Looking Back to Improve Training of Deep Neural Networks}
+\cite{jandial2020retrospective}~(\url{https://arxiv.org/pdf/2006.13593.pdf})
+
+\section{On Sampled Metrics for Item Recommendation}
+Best research paper~\url{http://walid.krichene.net/papers/KDD-sampled-metrics.pdf}
+
+\section{Temporal-Contextual Recommendation in Real-Time}
+Best ADS paper~\url{https://dl.acm.org/doi/pdf/10.1145/3394486.3403278}
+
+Интересная статья с последнего KDD. В отличии от предыдущих работ по теме, авторы предлагают сделать
+
+\section{Towards Automated Neural Interaction Discovering for Click-Through Rate Prediction}
+\url{https://arxiv.org/pdf/2007.06434.pdf}
+
+\section{On the Effectiveness of Self-supervised Pre-training for Modeling User Behavior Sequences
+Yiping Liao}
+\url{http://papers.adkdd.org/2020/papers/adkdd20-liao-effectiveness.pdf}
+
+% \bibliography{references}
+% \nocite{*} 
+
+\bibliographystyle{dinat}
+\bibliography{references}
+\nocite{*} 
+
+\end{document}
