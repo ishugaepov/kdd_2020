@@ -1,17 +1,43 @@
-\documentclass[11pt]{article}
+\documentclass[openany,11pt]{book}
 
 % --- Packages ---
 \usepackage[usenames, dvipsnames]{color} % Cool colors
-\usepackage{enumerate, amsmath, amsthm, amssymb, algorithm, algpseudocode, pifont, subfig, fullpage, csquotes, dashrule, tikz, bbm, booktabs, bm, verbatim, url}
+\usepackage{enumerate, amsmath, amsthm, amssymb, algorithm, algpseudocode, pifont, subfig, fullpage, dashrule, tikz, bbm, booktabs, bm, verbatim, url}
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage[numbers]{natbib}
+\usepackage{import}
 \usepackage[utf8x]{inputenc}
 \usepackage[russian]{babel}
+\usepackage{csquotes}
+
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\huge}
+  
+\usepackage{titletoc}
+
+\makeatletter
+\def\@endpart{
+    \vfil
+    \textcolor{black}{\hrule height 0.5 pt}
+    \setcounter{tocdepth}{0}
+    
+    \startcontents[parts]
+    \printcontents[parts]{}{0}{}
+    
+    \textcolor{black}{\hrule height 0.5 pt}
+    \par\bigskip
+    \vfil\newpage
+}
+\makeatother
+
 
 \usepackage[default,scale=0.95]{opensans}
 \renewcommand\seriesdefault{l}
 \renewcommand\mddefault{m}
-\renewcommand\bfdefault{m}% or \renewcommand\bfdefault{m}
+\renewcommand\bfdefault{m}
 
 % --- Misc. ---
 \hbadness=10000 % No "underfull hbox" messages.
@@ -32,60 +58,44 @@
     citebordercolor=dblue
 }
 
+% --- For bibliography ---
+\usepackage{bibunits}
 
 % --- Meta Info ---
 \title{KDD 2020 Notes}
-\author{Ilnur Shugaepov \\ \durl{VK.com}}
+\author{Ilnur Shugaepov \\ VK.com}
 \date{August 2020}
 
+% \doparttoc
 % --- Begin Document ---
 \begin{document}
 \maketitle
-\tableofcontents
+\setcounter{tocdepth}{0}
+\small{\tableofcontents}
 \newpage
 
-\section*{Introduction}
-This document contains short notes and my thoughts on interesting articles from KDD'2020.
+% \section*{Introduction}
+% This document contains short notes and my thoughts on interesting articles from KDD'2020.
 
-
-\section{Joint Optimization of Multiple Objectives on Music Streaming Platforms~\cite{rishabh2020multiobjective}}
-
-\section{Improving Deep Learning For Airbnb Search~\cite{haldar2020improving}}
-
-\section{General-Purpose User Embeddings based on Mobile App Usage~\cite{zhang2020general}}
-
-\section{Controllable Multi-Interest Framework for Recommendation}
-
-\section{Managing Diversity in Airbnb Search~\cite{abdool2020managing}}
-
-\section{Multitask Mixture of Sequential Experts for User Activity Streams}
-
-\section{Taming Pretrained Transformers for eXtreme Multi-label Text Classification}
-
-\section{SimClusters: Community-Based Representations for Heterogeneous Recs at Twitter}
-\url{https://dl.acm.org/doi/pdf/10.1145/3394486.3403370}
-
-\section{Ads Allocation in Feed via Constrained Optimization~\cite{yan2020ads}}
-
-\section{Retrospective Loss: Looking Back to Improve Training of Deep Neural Networks~\cite{jandial2020retrospective}}
-
-\section{On Sampled Metrics for Item Recommendation}
-Best research paper~\url{http://walid.krichene.net/papers/KDD-sampled-metrics.pdf}
-
-\section{Temporal-Contextual Recommendation in Real-Time}
-Best ADS paper~\url{https://dl.acm.org/doi/pdf/10.1145/3394486.3403278}
-
-\section{Towards Automated Neural Interaction Discovering for Click-Through Rate Prediction}
-\url{https://arxiv.org/pdf/2007.06434.pdf}
-
-\section{On the Effectiveness of Self-supervised Pre-training for Modeling User Behavior Sequences
-Yiping Liao}
-\url{http://papers.adkdd.org/2020/papers/adkdd20-liao-effectiveness.pdf}
-
-
-% --- Bibliography ---
+% -----------------
+% -- Advertising --
+% -----------------
 \newpage
-\bibliographystyle{plainnat}
-\bibliography{research}
+\part{Advertising}
+\subimport{parts/advertising/}{advertising.tex}
+
+% ------------
+% -- RecSys --
+% ------------
+\newpage
+\part{Recommender Systems}
+\subimport{parts/recsys/}{recsys.tex}
+
+% -------------------
+% -- Deep Learning --
+% -------------------
+\newpage
+\part{Deep Learning}
+\subimport{parts/dl/}{dl.tex}
 
 \end{document}
