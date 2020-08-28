@@ -10,11 +10,6 @@
 % \chapter{SimClusters: Community-Based Representations for Heterogeneous Recs at Twitter}
 % \url{https://dl.acm.org/doi/pdf/10.1145/3394486.3403370}
 
-% \chapter{General-Purpose User Embeddings based on Mobile App Usage}
-% \cite{zhang2020general}
-
-% \chapter{Controllable Multi-Interest Framework for Recommendation}
-
 % \chapter{Managing Diversity in Airbnb Search}
 % \cite{abdool2020managing}
 
@@ -79,6 +74,26 @@ Pinterest \\
 Для рекомендации релевантных пинов берут 3 наиболее важных кластера и ищут похожие пины с помощью приближенного поиска ближ соседей. \\
 
 Как и в большинстве последних статей от Pinterest, авторы рассматривают продакшн решение, поэтому достаточно внимания уделяют вопросу о том как все это тащить в прод.
+
+\section{Improving Recommendation Quality in Google Drive}
+
+Google \\
+
+\textbf{Reference:}~\url{https://research.google/pubs/pub49272/} \\
+
+Статья про попытки прокачать качество инструмента Quick Access (статья не научная, а просто про опыт и проведенные эксперименты) \\
+
+В целом, то о чем они пишут очень похоже на наш опыт и на наши эксперименты за последние года полтора. \\
+
+Эксперименты описанные в статье, которые похожие на наши
+\begin{itemize}
+    \item автоматизация пайплайнов переобучения моделей
+    \item попытки затащить DL модели (в статье наоборот пытаются перейти к GBDT)
+    \item изучение того как влияет latency на метрики
+    \item несколько примеров feature engineering'a 
+    \item эксперимент с увеличением числа кандидатов для ранжирования
+    \item фича мониторинг
+\end{itemize}
 
 \addcontentsline{toc}{chapter}{Литература}
 \putbib[refs_recsys]
