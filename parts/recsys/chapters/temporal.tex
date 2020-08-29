@@ -8,7 +8,7 @@ Amazon \\
 
 \textbf{Keywords:} recommender systems, recurrent neural networks, hybrid model
 
-\section{Какую задачу решают авторы?}
+\section*{Какую задачу решают авторы?}
 
 Разработчики современных рекомендательных систем сталкиваются со следующими челенджами: Система должна
 
@@ -29,11 +29,11 @@ Amazon \\
 
 Для того чтобы модель можно было за разумное время обучить на большом каталоге объектов, авторы предлагают использовать \texttt{Negative Sampling}~\cite{mikolov2013distributed} (NS) вместо классической многоклассовой классификации.
 
-\section{Как решают?}
+\section*{Как решают?}
 
 Не смотря на то, что в статье описано много интересного, я хотел бы уделить внимание только одному моменту в работе --- использование NS для ускорения обучения.
 
-\subsection{Negative Sampling}
+\subsection*{Negative Sampling}
 
 Сначала ответим на вопрос почему обучение моделей рекомендаций при большом размере каталога товаров может быть медленным. \\
 
@@ -59,7 +59,7 @@ Amazon \\
 
 Это позволяет не хранить матрицу $W$ и существенно ускоряет процесс обучения.
 
-\subsection{Experiments}
+\subsection*{Experiments}
 
 В рамках экспериментов авторы исследуют то как зависит скорость обучения (\#items/sec) при использовании NS от размера каталога. \\
 
@@ -95,7 +95,7 @@ Amazon \\
 
 \textbf{Remark:} A recommendation system with a PPL of $p$ is equivalent to one that recommends a uniform random selection of $p$ items, one of which is the true next item.
 
-\section{Выводы}
+\section*{Выводы}
 
 \dbox{\textbf{Key Takeaways}:
 \begin{enumerate}
