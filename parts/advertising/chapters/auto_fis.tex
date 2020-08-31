@@ -1,0 +1,61 @@
+\chapter{AutoFIS: Automatic Feature Interaction Selection in Factorization Models for CTR Prediction}
+
+Huawei \\
+
+\textbf{Reference:}~\url{https://arxiv.org/abs/2003.11235}
+
+\textbf{Keywords:} CTR prediction, factorization machines, neural architecture search
+
+\textbf{Обзорный коспект про CTR prediction:}
+
+\url{https://vk.com/@papersreaders-a-sparse-deep-factorization-machine-for-efficient-ctr-predic} \\
+
+\section*{Какую задачу решают авторы?}
+
+С появлением Factorization Machines (FM) стало понятно, что добавление в линейную модель взаимодействий второго порядка между признаками существенно улучшает качество модели. 
+
+Но также известно, что среди всех возможных пар признаков полезными является лишь небольшая часть (20-50\%).
+
+Поэтому добавление в модель всех пар признаков и учет их с одинаковым весом является субоптимальным решением. \\
+
+Авторы решают задачу поиска хороших пар признаков в FM-like моделях. 
+
+Это не первая попытка решить данную задачу для FM-like моделей (см.~\cite{xiao2017attentional,pan2018field}).
+
+Но в отличие от предыдущих работ, предложенный подход решает эту задачу лучше.
+
+\section*{Как решают}
+
+Решение состоит из двух фаз: \textit{search stage} и \textit{re-train stage}.
+
+В рамках search stage алгоритм находит хорошие пары признаков, а в рамках re-train stage FM-like модель обучается уже с использованием только отобранных пар.
+
+Рассмотрим чуть подробнее каждую из фаз.
+
+\paragraph{Search stage} 
+
+Модель для поиска хороших пар признаков выглядит следующим образом:
+\begin{equation*}
+    l_{\text {AutoFIS}}=\langle \vecw, \vecx\rangle+\sum_{i=1}^{m} \sum_{j>i}^{m} \alpha_{(i, j)}\left\langle \vece_{i}, \vece_{j}\right\rangle ,
+\end{equation*}
+по сути обычная FM модель, с той лишь разницей, что перед скалярным произведением векторов призанаков $\vece_{i}, \vece_{j}$ стоит обучаемый вес $\alpha_{(i, j)}$.
+
+Модель обучается на Binary Cross-Entropy Loss, но с использованием GRDA Optimizer'а, который позволяет получить sparse решение, то есть большая часть коэф $\alpha$ будет равна нулю.
+
+Соотвественно $\alpha_{(i, j)}$ принимает не нулевое значение для важных пар признаков.
+
+\paragraph{Re-train stage}
+
+После того как были отобраны пары признаков, модель дообучается (тюнятся как веса модели, так и коэффеиценты $\alpha$, но только для отобранных признаков).
+
+\section*{Преимущества подхода}
+
+Решение является довольно робастным, то есть запуск search stage с разным seed'ом приводит к похожим результатам.
+
+Найденные пары признаков можно легко использовать при обучении любых других FM-like моделей.
+
+\section*{Мое мнение}
+
+Интересно, что на сайте \url{https://paperswithcode.com/sota/click-through-rate-prediction-on-criteo} AutoFIS не показывает sota результаты. 
+
+Более того, незадолго до начала конференции KDD, авторы из Yahoo Research опубликовали работу DeepLight~\url{https://arxiv.org/abs/2002.06987}, которая показывает sota результаты на датасете Criteo.
