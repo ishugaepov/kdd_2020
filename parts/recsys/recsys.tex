@@ -10,9 +10,6 @@
 % \chapter{SimClusters: Community-Based Representations for Heterogeneous Recs at Twitter}
 % \url{https://dl.acm.org/doi/pdf/10.1145/3394486.3403370}
 
-% \chapter{Managing Diversity in Airbnb Search}
-% \cite{abdool2020managing}
-
 % \chapter{Multitask Mixture of Sequential Experts for User Activity Streams}
 
 \input{chapters/cluster.tex}
@@ -96,6 +93,36 @@ Google \\
     \item эксперимент с увеличением числа кандидатов для ранжирования
     \item фича мониторинг
 \end{itemize}
+
+\section*{Managing Diversity in Airbnb Search}
+
+\textbf{Reference:}~\cite{abdool2020managing} \\
+
+С продуктовой точки зрения, показ пользователю разнообразных (diverse) рекомендаций ведет к улучшению пользовательского опыта.
+
+Однако, современные модели ранжирования обучаются, оптимизируя relevance, что приводит к однообразным результатам в рекомендациях. \\
+
+В статье авторы численно проверяют предположение о том, что рекомендации довольно часто бывают однообразными, и предлагают метрику Mean Listing Relevance (MLR), которая позволяет оценить как релевантность объектов в выдаче, так и их разнообразие. 
+
+В основе предложенной метрики --- вычисление расстояний между объектами. \\
+
+В работе предложено большое количество способов как можно вычислить расстояние между двумя объектами и то как оптимизировать MLR. \\
+
+В заключении, авторы приводят результаты оффлайн и онлайн экспериментов где показывают рост как привычных для задачи ранжирования метрик, так и метрик связанных с разнообразием.
+
+\section*{Disentangled Self-Supervision in Sequential Recommenders}
+
+Alibaba \\
+
+\textbf{Reference:}~\url{http://pengcui.thumedialab.com/papers/DisentangledSequentialRecommendation.pdf}
+
+\textbf{Keywords:} sequence model, contrastive learning \\
+
+Новое sota решение в задаче sequential recommendations. Бьет BERT4Rec (на некоторых датасетах очень сильно).
+
+Судя по оптимизируемому лоссу, обучаться модель должна быстрее чем BERT4Rec.
+
+Жаль, что авторы не выложили исходный код.
 
 \addcontentsline{toc}{chapter}{Литература}
 \putbib[refs_recsys]
