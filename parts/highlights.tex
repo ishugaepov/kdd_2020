@@ -25,23 +25,23 @@
 
 % Some text about tutorial
 
-% \section*{Causal Inference Meets Machine Learning} 
-
-% \url{http://kdd2020tutorial.thumedialab.com}
-
-% Some text about tutorial
+% -----------------
+% -- New Section --
+% -----------------
 
 \section*{[Amazon AWS] Scalable Graph Neural Networks with Deep Graph Library} 
 
-Link:~\url{https://github.com/dglai/KDD20-Hands-on-Tutorial}
+\textbf{Link:}~\url{https://github.com/dglai/KDD20-Hands-on-Tutorial}
 
-Paper:~\url{https://arxiv.org/pdf/1909.01315.pdf} \\
+\textbf{Paper:}~\url{https://arxiv.org/pdf/1909.01315.pdf} \\
 
 Очень практический туториал про обучение графовых нейросетей. 
 
 Речь в основном идет про обучение GraphSAGE\footnote{\url{https://vk.com/papersreaders?w=wall-154085965_143}} с помощью фрэймворка DGL\footnote{\url{https://www.dgl.ai}} на графах разного размера: начиная с маленьких графов и обучения на CPU, заканчивая обучением на огромных графах с использованием нескольких машин. \\
 
-Туториал наглядно показывает, что обучать GNN используя DGL довольно просто.
+Туториал наглядно показывает, что обучать GNN используя DGL довольно просто. \\
+
+\textbf{Videos:}
 
 \begin{enumerate}
     \item Краткий обзор задач и методов в GNNs --- \url{https://www.youtube.com/watch?v=Soa-66W1CEQ}
@@ -50,25 +50,29 @@ Paper:~\url{https://arxiv.org/pdf/1909.01315.pdf} \\
     \item Обучение GraphSAGE на больших графах (сэмплирование соседей, dataloader'ы) на node classification и link prediction (single machine - single/multiple gpu(s)) --- \url{https://www.youtube.com/watch?v=2W0UIJX3GV8}
 \end{enumerate}
 
+% -----------------
+% -- New Section --
+% -----------------
+
 \section*{Graph Representation Learning}
 
-Video:~\url{https://www.youtube.com/watch?time_continue=27&v=J9AhyrTs2Nk&feature=emb_logo}
+\textbf{Video:}~\url{https://www.youtube.com/watch?time_continue=27&v=J9AhyrTs2Nk&feature=emb_logo}
 
-Book:~\url{https://www.cs.mcgill.ca/~wlh/grl_book/} \\
+\textbf{Book:}~\url{https://www.cs.mcgill.ca/~wlh/grl_book/} \\
 
 Обзорный рассказ об истории развития GRL, о современных методах и приложениях, о текущих челенджах и открытых вопросах.
 
-% \section*{Building Recommender Systems with PyTorch} 
-
-% \url{https://github.com/pytorch/workshops/tree/master/KDD_2020}
-
-% Some text about tutorial
+% -----------------
+% -- New Section --
+% -----------------
 
 \section*{[Linkedin] Deep Learning for Search and Recommender Systems} 
 
-Link:~\url{https://sites.google.com/view/kdd20tutorial-deepsnr} \\
+\textbf{Link:}~\url{https://sites.google.com/view/kdd20tutorial-deepsnr} \\
 
-Туториал от Linkedin про DL методы в поиске и рекомендациях: обзор основных задач, методы решений и Hands On с использованием их фрэймворка DeText\footnote{\url{https://github.com/linkedin/detext}}.
+Туториал от Linkedin про DL методы в поиске и рекомендациях: обзор основных задач, методы решений и Hands On с использованием их фрэймворка DeText\footnote{\url{https://github.com/linkedin/detext}}. \\
+
+\textbf{Videos:}
 
 \begin{enumerate}
     \item Краткий обзор туториала --- \url{https://www.youtube.com/watch?time_continue=2&v=Dp2Iwd4FWsU&feature=emb_logo}
@@ -89,6 +93,10 @@ Link:~\url{https://sites.google.com/view/kdd20tutorial-deepsnr} \\
     \item Hands On: Learning to Rank with DeText --- \url{https://www.youtube.com/watch?v=C-erioRqg4Y&feature=emb_logo}
 \end{enumerate}
 
+% -----------------
+% -- New Section --
+% -----------------
+
 \section*{[Google] Neural Structured Learning} 
 
 Практический туториал про регуляризацию обучения с помощью информации представленной в виде графов (реализация Graph-RISE\footnote{\url{https://vk.com/papersreaders?w=wall-154085965_180}}) на TF. \\
@@ -100,22 +108,118 @@ References:
 	\item Graph-RISE: Graph-Regularized Image Semantic Embedding\footnote{\url{https://arxiv.org/pdf/1902.10814.pdf}}
 \end{itemize}
 
-Videos:
+\textbf{Videos:}
+
+\url{https://www.youtube.com/watch?v=iyONhiDuCKE&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=MQ3Ec-19_bc}
+
+\url{https://www.youtube.com/watch?v=qmY-CANCTdk&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=h-nTn4nWZo8&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=qTC470NNlZ0&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=9Mwf0VaWGwE&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=FqOWxvvYSA8&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=uK4j8CtIXgs&feature=emb_logo}
+
+% -----------------
+% -- New Section --
+% -----------------
+
+\section*{Causal Inference Meets Machine Learning} 
+
+\textbf{Link:}~\url{http://kdd2020tutorial.thumedialab.com}
+
+\textbf{Paper:}~\url{https://arxiv.org/abs/2002.02770} \\
+
+Туториал про то как оценивать эффект изменений когда либо нет возможности провести ABT либо когда выборки treatment и control имеют разное распределение.
+
+Как получить несмещенную оценку эффекта и убрать всякие разные bias'ы. \\
+
+\url{https://www.youtube.com/watch?v=g_2dMQCU0zo&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=I6yi_wd4r94&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=f2dvVpDxD3A&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=J4B00WZH5A0&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=_DwdpmZkY1M&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?v=roVS6LQS6tk&feature=emb_logo}
+
+% -----------------
+% -- New Section --
+% -----------------
+
+\section*{[Facebook] Building Recommender Systems with PyTorch} 
+
+\textbf{Link:}~\url{https://github.com/pytorch/workshops/tree/master/KDD_2020} \\
+
+По большей части обзорный туториал про обучение рек. систем с помощью PyTorch DLRM\footnote{\url{https://arxiv.org/pdf/1906.00091.pdf}}\footnote{\url{https://github.com/facebookresearch/dlrm}} (касаются вопросов распределенного обучения). \\
+
+Немного про интерпретацию нейросетевых PyTorch моделей с помощью библиотеки Captum\footnote{\url{https://github.com/pytorch/captum}}, и про PyTorch MMF\footnote{\url{https://github.com/facebookresearch/mmf}} --- фрэймворк для обучения моделей, которые на вход получают картинки И текст (например Visual Question Answering).  \\
+
+\textbf{Videos:}
 
 \begin{enumerate}
-    \item \url{https://www.youtube.com/watch?v=iyONhiDuCKE&feature=emb_logo}
-    \item \url{https://www.youtube.com/watch?v=MQ3Ec-19_bc}
-    \item \url{https://www.youtube.com/watch?v=qmY-CANCTdk&feature=emb_logo}
-    \item \url{https://www.youtube.com/watch?v=h-nTn4nWZo8&feature=emb_logo}
-    \item \url{https://www.youtube.com/watch?v=qTC470NNlZ0&feature=emb_logo}
-    \item \url{https://www.youtube.com/watch?v=9Mwf0VaWGwE&feature=emb_logo}
-    \item \url{https://www.youtube.com/watch?v=FqOWxvvYSA8&feature=emb_logo}
-    \item \url{https://www.youtube.com/watch?v=uK4j8CtIXgs&feature=emb_logo}
+    \item Введение в PyTorch (design principles, ecosystem), кратко о том почему PyTorch удобен для обучения очень больших моделей (уменьшение размера моделей: pruning, quantization; надежное распределенное обучение) --- \url{https://www.youtube.com/watch?v=AVyJAgGSSSQ&feature=emb_logo} 
+    \item Введение в DLRMs и распределенное обучение больших моделей (как data так и model parallelism). Более близкий взгляд на саму DLRM модель (прикольные способы сжатия эмбеддингов) --- \url{https://www.youtube.com/watch?v=Q-1hVeB2BWo&feature=emb_logo}
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.8\linewidth]{parts/recsys/images/dlrm.png}
+        \end{figure}
+        
+        Также полезные ссылки: Microsoft Recommenders (\url{https://arxiv.org/pdf/2008.13528.pdf}), NVIDIA Merling (\url{https://github.com/NVIDIA/HugeCTR})
+    \item Немного про Captum - библиотека для интерпретации самых разных PyTorch моделей (например, выделение важных частей в инпуте) работающих с самыми разными входными данными (табличные, текст, картинки) --- \url{https://www.youtube.com/watch?v=fzrq1QGwsVo&feature=emb_logo}
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\linewidth]{parts/recsys/images/captum.png}
+        \end{figure}
+    \item Hands On: MMF фрэймворк для обучения моделей, которые на вход получают картинки И текст (например Visual Question Answering) --- \url{https://www.youtube.com/watch?v=quNtfWwNmPw&feature=emb_logo}
 \end{enumerate}
 
-% Some text about tutorial
+% -----------------
+% -- New Section --
+% -----------------
 
-% \section*{Robust Deep Learning Methods for Anomaly Detection} 
+\section*{[Microsoft] AutoML}
+\textbf{Video:}~\url{https://www.youtube.com/watch?time_continue=537&v=OoNeBuXkLeg&feature=emb_logo} \\
 
-% Some text about tutorial
+Microsoft Azure AutoML Platform from a user point of view.
 
+% -----------------
+% -- New Section --
+% -----------------
+
+\section*{Reinforcement Learning}
+
+Всякое разное про современный RL \\
+
+\url{https://www.youtube.com/watch?v=-Y6fmyMWIQ0}
+
+\url{https://www.youtube.com/watch?time_continue=3&v=mLT3AgrOSsQ&feature=emb_logo}
+
+\url{https://www.youtube.com/watch?time_continue=3&v=LIKrJnCo5fY&feature=emb_logo}
+
+% -----------------
+% -- New Section --
+% -----------------
+
+\section*{Robust Deep Learning Methods for Anomaly Detection} 
+
+\textbf{Link:}~\url{https://github.com/raghavchalapathy/KDD-Tutorials-2020-Deep-Robust-Anomaly-Detection} \\
+
+\textbf{Videos:}
+
+\begin{enumerate}
+    \item Настройка окружения в Google Colab --- \url{https://www.youtube.com/watch?time_continue=4&v=8TY1UHYcjzk&feature=emb_logo}, \url{https://www.youtube.com/watch?v=H0t09clEkU4&feature=emb_logo}
+    \item Обзор всяких разных Autoencoder'ов (AE, VAE, Adversarial AE, Wasserstein AE), введение в использование AE для anomaly detection --- \url{https://www.youtube.com/watch?v=UdWTRdhIdQY&feature=emb_logo}
+    \item Hands On: AE for anomaly detection with toy dataset (Keras) --- \url{https://www.youtube.com/watch?v=BF3Plbp08sQ&feature=emb_logo}
+    \item Introduction to Robust (Convolutional) AE --- \url{https://www.youtube.com/watch?v=unkue4h5f4A&feature=emb_logo}
+    \item Hands On: RAE implementation --- \url{https://www.youtube.com/watch?v=rp1Z7DVt_ZA&feature=emb_logo}
+\end{enumerate}
