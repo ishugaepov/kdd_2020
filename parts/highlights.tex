@@ -13,45 +13,109 @@
 
 Также на конференции было много статей и туториалов, посвещенных обучению на графах.
 
-\section*{Highlights}
+\chapter{Tutorials}
 
 Так как конференция проходила в удаленном формате, то для большинства туториалов были предзаписаны видео, поэтому получилось посмотреть записи почти всех туториалов, которые меня заинтерисовали. \\
 
 Ниже список туториалов, которые показались мне наиболее интересными, с кратким описанием.
 
-\paragraph{Advances in Recommender Systems: From Multi-stakeholder Marketplaces to Automated RecSys} $ $\\
+% \section*{Advances in Recommender Systems: From Multi-stakeholder Marketplaces to Automated RecSys} 
 
-\url{https://sites.google.com/view/kdd20-marketplace-autorecsys/}
+% \url{https://sites.google.com/view/kdd20-marketplace-autorecsys/}
 
-Some text about tutorial
+% Some text about tutorial
 
-\paragraph{Causal Inference Meets Machine Learning} $ $\\
+% \section*{Causal Inference Meets Machine Learning} 
 
-\url{http://kdd2020tutorial.thumedialab.com}
+% \url{http://kdd2020tutorial.thumedialab.com}
 
-Some text about tutorial
+% Some text about tutorial
 
-\paragraph{Neural Structured Learning} $ $\\
+\section*{[Amazon AWS] Scalable Graph Neural Networks with Deep Graph Library} 
 
-Some text about tutorial
+Link:~\url{https://github.com/dglai/KDD20-Hands-on-Tutorial}
 
-\paragraph{Scalable Graph Neural Networks with Deep Graph Library} $ $\\
+Paper:~\url{https://arxiv.org/pdf/1909.01315.pdf} \\
 
-Some text about tutorial
+Очень практический туториал про обучение графовых нейросетей. 
 
-\paragraph{Building Recommender Systems with PyTorch} $ $\\
+Речь в основном идет про обучение GraphSAGE\footnote{\url{https://vk.com/papersreaders?w=wall-154085965_143}} с помощью фрэймворка DGL\footnote{\url{https://www.dgl.ai}} на графах разного размера: начиная с маленьких графов и обучения на CPU, заканчивая обучением на огромных графах с использованием нескольких машин. \\
 
-\url{https://github.com/pytorch/workshops/tree/master/KDD_2020}
+Туториал наглядно показывает, что обучать GNN используя DGL довольно просто.
 
-Some text about tutorial
+\begin{enumerate}
+    \item Краткий обзор задач и методов в GNNs --- \url{https://www.youtube.com/watch?v=Soa-66W1CEQ}
+    \item Вводное видео --- \url{https://www.youtube.com/watch?v=JMF4KAkO0zo}
+    \item Обучение GraphSAGE с помощью DGL+PyTorch на задачах node classification и link prediction (на gpu в том числе) --- \url{https://www.youtube.com/watch?v=OEBk_HvKNcQ}
+    \item Обучение GraphSAGE на больших графах (сэмплирование соседей, dataloader'ы) на node classification и link prediction (single machine - single/multiple gpu(s)) --- \url{https://www.youtube.com/watch?v=2W0UIJX3GV8}
+\end{enumerate}
 
-\paragraph{Deep Learning for Search and Recommender Systems} $ $\\
+\section*{Graph Representation Learning}
 
-\url{https://sites.google.com/view/kdd20tutorial-deepsnr}
+Video:~\url{https://www.youtube.com/watch?time_continue=27&v=J9AhyrTs2Nk&feature=emb_logo}
 
-Some text about tutorial
+Book:~\url{https://www.cs.mcgill.ca/~wlh/grl_book/} \\
 
-% \paragraph{Robust Deep Learning Methods for Anomaly Detection} $ $\\
+Обзорный рассказ об истории развития GRL, о современных методах и приложениях, о текущих челенджах и открытых вопросах.
+
+% \section*{Building Recommender Systems with PyTorch} 
+
+% \url{https://github.com/pytorch/workshops/tree/master/KDD_2020}
+
+% Some text about tutorial
+
+\section*{[Linkedin] Deep Learning for Search and Recommender Systems} 
+
+Link:~\url{https://sites.google.com/view/kdd20tutorial-deepsnr} \\
+
+Туториал от Linkedin про DL методы в поиске и рекомендациях: обзор основных задач, методы решений и Hands On с использованием их фрэймворка DeText\footnote{\url{https://github.com/linkedin/detext}}.
+
+\begin{enumerate}
+    \item Краткий обзор туториала --- \url{https://www.youtube.com/watch?time_continue=2&v=Dp2Iwd4FWsU&feature=emb_logo}
+    \item Обзор задач возникающих в поиске, и методов их решения --- \url{https://www.youtube.com/watch?v=LwjIKqNsQjc&feature=emb_logo}. В основе всего Sequential Modeling. 
+    Задачи
+        \begin{itemize}
+            \item Query Intent Classification (есть в DeText) - понять к чему относится запрос, поиск людей/вакансий/постов итд.
+            \item Query Completion (есть в DeText) - автодополнение поискового запроса
+            \item Query Suggestion - рекомендация запросов
+            \item Sequence Labeling - выделение в тексте запроса сущностей (NER)
+            \item Ranking (есть в DeText) - ранжирование отобранных документов-кандидатов
+        \end{itemize}
+    \item Hands On: query intent classification with DeText --- \url{https://www.youtube.com/watch?v=QZ5fbO3NA64&feature=emb_logo}
+    \item Hands On: query completion with DeText --- \url{https://www.youtube.com/watch?v=OLfeOcZ7y6A&feature=emb_logo}
+    \item Candidate Retrieval: обзор классических (lexical matching) и современных (embeddings based) методов отбора документов-кандидатов --- \url{https://www.youtube.com/watch?v=KECp0syOH28&feature=emb_logo}
+    \item Hands On: candidates retrieval with Elasticsearch --- \url{https://www.youtube.com/watch?v=MXbttPyNON0&feature=emb_logo}
+    \item Ranking: Metrics (NDCG, MAP, MRR), Learning to Rank (loss functions, algorithms) --- \url{https://www.youtube.com/watch?v=mw_zdRLbhJM&feature=emb_logo}
+    \item Hands On: Learning to Rank with DeText --- \url{https://www.youtube.com/watch?v=C-erioRqg4Y&feature=emb_logo}
+\end{enumerate}
+
+\section*{[Google] Neural Structured Learning} 
+
+Практический туториал про регуляризацию обучения с помощью информации представленной в виде графов (реализация Graph-RISE\footnote{\url{https://vk.com/papersreaders?w=wall-154085965_180}}) на TF. \\
+
+References:
+
+\begin{itemize}
+    \item Neural Graph Learning: Training Neural Networks Using Graphs\footnote{\url{https://storage.googleapis.com/pub-tools-public-publication-data/pdf/bbd774a3c6f13f05bf754e09aa45e7aa6faa08a8.pdf}}
+	\item Graph-RISE: Graph-Regularized Image Semantic Embedding\footnote{\url{https://arxiv.org/pdf/1902.10814.pdf}}
+\end{itemize}
+
+Videos:
+
+\begin{enumerate}
+    \item \url{https://www.youtube.com/watch?v=iyONhiDuCKE&feature=emb_logo}
+    \item \url{https://www.youtube.com/watch?v=MQ3Ec-19_bc}
+    \item \url{https://www.youtube.com/watch?v=qmY-CANCTdk&feature=emb_logo}
+    \item \url{https://www.youtube.com/watch?v=h-nTn4nWZo8&feature=emb_logo}
+    \item \url{https://www.youtube.com/watch?v=qTC470NNlZ0&feature=emb_logo}
+    \item \url{https://www.youtube.com/watch?v=9Mwf0VaWGwE&feature=emb_logo}
+    \item \url{https://www.youtube.com/watch?v=FqOWxvvYSA8&feature=emb_logo}
+    \item \url{https://www.youtube.com/watch?v=uK4j8CtIXgs&feature=emb_logo}
+\end{enumerate}
+
+% Some text about tutorial
+
+% \section*{Robust Deep Learning Methods for Anomaly Detection} 
 
 % Some text about tutorial
 
