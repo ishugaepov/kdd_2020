@@ -39,9 +39,9 @@
 
 Речь в основном идет про обучение GraphSAGE\footnote{\url{https://vk.com/papersreaders?w=wall-154085965_143}} с помощью фрэймворка DGL\footnote{\url{https://www.dgl.ai}} на графах разного размера: начиная с маленьких графов и обучения на CPU, заканчивая обучением на огромных графах с использованием нескольких машин. \\
 
-Туториал наглядно показывает, что обучать GNN используя DGL довольно просто. \\
+Туториал наглядно показывает, что обучать GNN используя DGL довольно просто.
 
-\textbf{Videos:}
+\paragraph{Videos}
 
 \begin{enumerate}
     \item Краткий обзор задач и методов в GNNs --- \url{https://www.youtube.com/watch?v=Soa-66W1CEQ}
@@ -70,9 +70,9 @@
 
 \textbf{Link:}~\url{https://sites.google.com/view/kdd20tutorial-deepsnr} \\
 
-Туториал от Linkedin про DL методы в поиске и рекомендациях: обзор основных задач, методы решений и Hands On с использованием их фрэймворка DeText\footnote{\url{https://github.com/linkedin/detext}}. \\
+Туториал от Linkedin про DL методы в поиске и рекомендациях: обзор основных задач, методы решений и Hands On с использованием их фрэймворка DeText\footnote{\url{https://github.com/linkedin/detext}}.
 
-\textbf{Videos:}
+\paragraph{Videos}
 
 \begin{enumerate}
     \item Краткий обзор туториала --- \url{https://www.youtube.com/watch?time_continue=2&v=Dp2Iwd4FWsU&feature=emb_logo}
@@ -109,7 +109,7 @@ References:
 	\item Graph-RISE: Graph-Regularized Image Semantic Embedding\footnote{\url{https://arxiv.org/pdf/1902.10814.pdf}}
 \end{itemize}
 
-\textbf{Videos:}
+\paragraph{Videos}
 
 \url{https://www.youtube.com/watch?v=iyONhiDuCKE&feature=emb_logo}
 
@@ -164,9 +164,9 @@ References:
 
 По большей части обзорный туториал про обучение рек. систем с помощью PyTorch DLRM\footnote{\url{https://arxiv.org/pdf/1906.00091.pdf}}\footnote{\url{https://github.com/facebookresearch/dlrm}} (касаются вопросов распределенного обучения). \\
 
-Немного про интерпретацию нейросетевых PyTorch моделей с помощью библиотеки Captum\footnote{\url{https://github.com/pytorch/captum}}, и про PyTorch MMF\footnote{\url{https://github.com/facebookresearch/mmf}} --- фрэймворк для обучения моделей, которые на вход получают картинки И текст (например Visual Question Answering).  \\
+Немного про интерпретацию нейросетевых PyTorch моделей с помощью библиотеки Captum\footnote{\url{https://github.com/pytorch/captum}}, и про PyTorch MMF\footnote{\url{https://github.com/facebookresearch/mmf}} --- фрэймворк для обучения моделей, которые на вход получают картинки И текст (например Visual Question Answering).  
 
-\textbf{Videos:}
+\paragraph{Videos}
 
 \begin{enumerate}
     \item Введение в PyTorch (design principles, ecosystem), кратко о том почему PyTorch удобен для обучения очень больших моделей (уменьшение размера моделей: pruning, quantization; надежное распределенное обучение) --- \url{https://www.youtube.com/watch?v=AVyJAgGSSSQ&feature=emb_logo} 
@@ -223,6 +223,16 @@ References:
 % -- New Section --
 % -----------------
 
+\section*{[Amazon] Practical AutoML for Tabular, Text, and Image Data}
+
+\textbf{Link:}~\url{https://jwmueller.github.io/KDD20-tutorial/} \\
+
+Туториал
+
+% -----------------
+% -- New Section --
+% -----------------
+
 \section*{[Microsoft] AutoML}
 \textbf{Video:}~\url{https://www.youtube.com/watch?time_continue=537&v=OoNeBuXkLeg&feature=emb_logo} \\
 
@@ -250,9 +260,9 @@ Microsoft Azure AutoML Platform from a user point of view.
 
 \textbf{Link:}~\url{https://github.com/raghavchalapathy/KDD-Tutorials-2020-Deep-Robust-Anomaly-Detection} \\
 
-Использование автоэнкодеров для решения задачи детекции аномалий. \\
+Использование автоэнкодеров для решения задачи детекции аномалий. 
 
-\textbf{Videos:}
+\paragraph{Videos}
 
 \begin{enumerate}
     \item Настройка окружения в Google Colab --- \url{https://www.youtube.com/watch?time_continue=4&v=8TY1UHYcjzk&feature=emb_logo}, \url{https://www.youtube.com/watch?v=H0t09clEkU4&feature=emb_logo}
@@ -261,3 +271,26 @@ Microsoft Azure AutoML Platform from a user point of view.
     \item Introduction to Robust (Convolutional) AE --- \url{https://www.youtube.com/watch?v=unkue4h5f4A&feature=emb_logo}
     \item Hands On: RAE implementation --- \url{https://www.youtube.com/watch?v=rp1Z7DVt_ZA&feature=emb_logo}
 \end{enumerate}
+
+% -----------------
+% -- New Section --
+% -----------------
+
+\section*{How to Calibrate Your Neural Network Classifier}
+
+\textbf{Link:}~\url{https://github.com/nplan-io/kdd2020-calibration}
+
+\textbf{Video:}~\url{https://www.youtube.com/watch?v=I4jikv07DFw&feature=emb_logo}
+
+\textbf{Основная статья:}~\url{https://arxiv.org/pdf/1706.04599.pdf}
+
+\paragraph{О чем туториал}
+
+\begin{itemize}
+    \item Что такое калибрация и зачем она нужна
+    \item Reliability diagram\footnote{\url{https://towardsdatascience.com/introduction-to-reliability-diagrams-for-probability-calibration-ed785b3f5d44}} - как инструмент для проверки калибрации модели; Expected/Maximum Calibration Error - численный способ оценить калибрацию модели
+    \item Calibration for multi-class case
+    \item Calibration Methods --- isotonic regression, Platt scaling, temperature scaling
+\end{itemize}
+
+Туториал содержит как теоретическую часть так и code sessions.
