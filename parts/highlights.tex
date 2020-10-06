@@ -97,6 +97,7 @@
 % -- New Section --
 % -----------------
 
+\newpage
 \section*{[Google] Neural Structured Learning} 
 
 Практический туториал про регуляризацию обучения с помощью информации представленной в виде графов (реализация Graph-RISE\footnote{\url{https://vk.com/papersreaders?w=wall-154085965_180}}) на TF. \\
@@ -156,6 +157,7 @@ References:
 % -- New Section --
 % -----------------
 
+\newpage
 \section*{[Facebook] Building Recommender Systems with PyTorch} 
 
 \textbf{Link:}~\url{https://github.com/pytorch/workshops/tree/master/KDD_2020} \\
@@ -181,6 +183,40 @@ References:
             \includegraphics[width=0.5\linewidth]{parts/recsys/images/captum.png}
         \end{figure}
     \item Hands On: MMF фрэймворк для обучения моделей, которые на вход получают картинки И текст (например Visual Question Answering) --- \url{https://www.youtube.com/watch?v=quNtfWwNmPw&feature=emb_logo}
+\end{enumerate}
+
+% -----------------
+% -- New Section --
+% -----------------
+
+\section*{[Linkedin] Image and Video Understanding for Recommendation and Spam Detection Systems}
+
+Туториал состоит из двух больших частей - вводная часть и приложения в Linkedin.  
+
+Вводную имеет смысл смотреть если хочется получить высокоуровневое представление о задачах и методах, которые возникают в Image and Video Understanding.
+
+Самое интересное - приложения в Linkedin.
+
+\paragraph{Вводная часть}
+
+\begin{enumerate}
+    \item Introduction to image and video usage in recommendations, search and spam detection at Linkedin --- \url{https://vimeo.com/445696336}
+    \item Обзор основных задач связанных с \textbf{Image Understanding} - classification, segmentation, objects detection, captioning.
+    
+        Обзор методов получения представлений для изображений (с 10х годов и до наших дней) --- \url{https://vimeo.com/445696409}
+    \item \textbf{Image representations} --- Кратко про NASNet (поиск архитектуры для ImageNet); EfficientNet (increase the efficiency, while maintaining accuracy) - very good choice if you are looking for a smaller network; Transfer Learning; Deep Metric Learning (siamese nets, contrastive loss); VilBERT --- \url{https://vimeo.com/445696505}
+    \item \textbf{Video Understanding} --- Tasks (classification, segmentation, captioning)  --- \url{https://vimeo.com/445696678}
+    \item Video Understanding - \textbf{Temporal Deep Learning Methods} --- \url{https://vimeo.com/445696755}, \url{https://vimeo.com/445696881}
+    \item Video applications for \textbf{speech recognition} --- обзор современных и не очень методов --- \url{https://vimeo.com/445696966}
+\end{enumerate}
+
+\paragraph{Applications at Linkedin}
+
+\begin{enumerate}
+    \item Кратко про \textbf{пайплайны} (оффлайн/онлайн части) связанные с обработкой изображений и видео. \textbf{Video Search} - speech-to-text --- \url{https://vimeo.com/445697241}
+    \item \textbf{Feed and Ads Modeling} --- чуть подробнее о том, как получают эмбеддинги для видео (коллаборативные и не очень) --- \url{https://vimeo.com/445697405}
+    \item \textbf{Feed and Ads} --- Member Video Affinity (предсказание вероятности взаимодействия пользователя с видео) as a feature in Ranking Model --- \url{https://vimeo.com/445697492}
+    \item \textbf{Spam Detection} --- пайплайны и модели --- \url{https://vimeo.com/445697551}
 \end{enumerate}
 
 % -----------------
@@ -213,6 +249,8 @@ Microsoft Azure AutoML Platform from a user point of view.
 \section*{Robust Deep Learning Methods for Anomaly Detection} 
 
 \textbf{Link:}~\url{https://github.com/raghavchalapathy/KDD-Tutorials-2020-Deep-Robust-Anomaly-Detection} \\
+
+Использование автоэнкодеров для решения задачи детекции аномалий. \\
 
 \textbf{Videos:}
 
