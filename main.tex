@@ -17,8 +17,8 @@
 \usepackage{titlesec}
 \usepackage{lipsum}
 
-\titleformat{\chapter}[display]
-  {\normalfont\bfseries}{}{0pt}{\huge}
+% \titleformat{\chapter}[display]
+%   {\normalfont\bfseries}{}{0pt}{\huge}
   
 \usepackage{titletoc}
 
@@ -37,6 +37,14 @@
 }
 \makeatother
 
+\titleformat{\chapter}[hang]{\normalfont\bfseries}{}{0pt}{\huge}
+% [\vspace*{4pc}%
+% \startcontents
+% \titlerule
+% \vspace{6pt}
+% \printcontents{p}{1}{\setcounter{tocdepth}{3}}
+% \vspace{6pt}
+% \titlerule]
 
 \usepackage[default,scale=1.0]{opensans}
 \renewcommand\seriesdefault{l}
